@@ -32,11 +32,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 import org.scenicview.ScenicView;
-import org.scenicview.utils.ExceptionLogger;
-import org.scenicview.utils.PropertiesUtils;
-import org.scenicview.utils.Logger;
-import org.scenicview.utils.Utils;
-import org.scenicview.utils.Platform;
+import org.scenicview.utils.*;
 
 /**
  *

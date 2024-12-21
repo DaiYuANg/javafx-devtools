@@ -29,6 +29,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.fxconnector.AppController;
 import org.fxconnector.AppControllerImpl;
 import org.fxconnector.StageControllerImpl;
@@ -37,7 +38,6 @@ import org.scenicview.model.attach.AttachHandlerFactory;
 import org.scenicview.model.update.LocalUpdateStrategy;
 import org.scenicview.model.update.RemoteVMsUpdateStrategy;
 import org.scenicview.utils.ExceptionLogger;
-import org.scenicview.utils.Logger;
 import org.scenicview.view.ScenicViewGui;
 
 /**
@@ -67,13 +67,6 @@ public class ScenicView extends Application {
      * 
      *************************************************************************/
 
-    private static void activateDebug() {
-        Logger.setEnabled(debug);
-    }
-
-    private static void startup() {
-        activateDebug();
-    }
 
     /**************************************************************************
      *
@@ -90,7 +83,7 @@ public class ScenicView extends Application {
             return;
         }
         
-        startup();
+//        startup();
 
         final Stage stage = new Stage();
         
@@ -146,50 +139,39 @@ public class ScenicView extends Application {
         scenicViewBootThread.start();
     }
 
-    public static void main(final String[] args) {
-        if (args.length > 0) {
-            for (int i = 0; i < args.length; i++) {
-                if (args[i].equals("-debug")) {
-                    debug = true;
-                }
-            }
-        }
-        launch(args);
-    }
-
     @Override public void start(final Stage stage) throws Exception {
         // This mode is only available when we are in the commercial Scenic View,
         // so we must start up the license checker and validate
 
-        // Test if we can load a class from jfxrt.jar
-        try {
-            Class.forName("javafx.beans.property.SimpleBooleanProperty").newInstance();
-        } catch (final Exception e) {
-            // Fatal error - JavaFX should be on the classpath for all users
-            // of Java 8.0 and above (which is what Scenic View 8.0 and above
-            // targets.
-            Logger.print("Error: JavaFX not found");
-            System.exit(-1);
-        }
+//        // Test if we can load a class from jfxrt.jar
+//        try {
+//            Class.forName("javafx.beans.property.SimpleBooleanProperty").newInstance();
+//        } catch (final Exception e) {
+//            // Fatal error - JavaFX should be on the classpath for all users
+//            // of Java 8.0 and above (which is what Scenic View 8.0 and above
+//            // targets.
+//            Logger.print("Error: JavaFX not found");
+//            System.exit(-1);
+//        }
 
         AttachHandlerFactory.initAttachAPI(stage);
 //        System.setProperty(FXConnector.SCENIC_VIEW_VM, "true");
-        startup();
+//        startup();
 
         setUserAgentStylesheet(STYLESHEET_MODENA);
 
-        final RemoteVMsUpdateStrategy strategy = new RemoteVMsUpdateStrategy();
+        val strategy = new RemoteVMsUpdateStrategy();
 
         // workaround for RT-10714
         stage.setWidth(1024);
         stage.setHeight(768);
         stage.setTitle("Scenic View v" + ScenicViewGui.VERSION);
-        Logger.print("Platform running");
-        Logger.print("Launching ScenicView v" + ScenicViewGui.VERSION);
+        log.atInfo().log("Platform running");
+        log.atInfo().log("Launching ScenicView v" + ScenicViewGui.VERSION);
         ScenicViewGui view = new ScenicViewGui(strategy, stage);
         ScenicViewGui.show(view, stage);
 
-        Logger.print("Startup done");
+        log.atInfo().log("Startup done");
         while (view == null) {
             try {
                 Thread.sleep(500);
@@ -198,12 +180,12 @@ public class ScenicView extends Application {
             }
         }
 
-        Logger.print("Creating server");
+        log.atInfo().log("Creating server");
         try {
             strategy.setFXConnector(FXConnectorFactory.getConnector());
         } catch (final RemoteException e1) {
             ExceptionLogger.submitException(e1);
         }
-        Logger.print("Server done");
+        log.atInfo().log("Server done");
     }
 }

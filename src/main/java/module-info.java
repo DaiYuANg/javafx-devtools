@@ -23,12 +23,18 @@ module org.scenicview.scenicview {
   requires static lombok;
   requires org.slf4j;
   requires static org.jetbrains.annotations;
+  requires io.avaje.inject;
+  requires com.google.common;
 
   requires java.instrument;
   requires java.rmi;
   requires java.logging;
   requires jdk.attach;
   requires java.desktop;
+  requires org.eclipse.collections.api;
+  requires org.eclipse.collections.impl;
+  requires io.vavr;
+  requires com.jthemedetector;
 
   opens org.scenicview.view.cssfx to javafx.fxml;
   opens org.scenicview.view.threedom to javafx.fxml;
@@ -40,4 +46,7 @@ module org.scenicview.scenicview {
 
   exports org.fxconnector;
   exports org.scenicview;
+  exports org.javafx.devtools;
+
+  provides io.avaje.inject.spi.InjectExtension with org.javafx.devtools.DevtoolsModule;
 }
