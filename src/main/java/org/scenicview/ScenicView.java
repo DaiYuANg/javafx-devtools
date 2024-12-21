@@ -28,6 +28,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import lombok.extern.slf4j.Slf4j;
 import org.fxconnector.AppController;
 import org.fxconnector.AppControllerImpl;
 import org.fxconnector.StageControllerImpl;
@@ -42,9 +43,15 @@ import org.scenicview.view.ScenicViewGui;
 /**
  * This is the entry point for all different versions of Scenic View.
  */
+@Slf4j
 public class ScenicView extends Application {
 
-    /**************************************************************************
+  @Override
+  public void init() throws Exception {
+    log.atInfo().log("test");
+  }
+
+  /**************************************************************************
      *
      * fields
      * 

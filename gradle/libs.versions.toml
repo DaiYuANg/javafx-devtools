@@ -1,0 +1,54 @@
+[versions]
+avajeInject = "11.1-RC1"
+record-builder = "44"
+ikonli = "12.3.1"
+slf4j = "2.0.16"
+
+[plugins]
+javafx = { id = "org.openjfx.javafxplugin", version = "0.1.0" }
+versionCheck = { id = "com.github.ben-manes.versions", version = "0.51.0" }
+maniftest = { id = "com.coditory.manifest", version = "1.1.0" }
+shadow = { id = "com.gradleup.shadow", version = "9.0.0-beta4" }
+jlink = { id = "org.beryx.jlink", version = "3.1.1" }
+graalvm = { id = "org.graalvm.buildtools.native", version = "0.10.4" }
+spotless = { id = "com.diffplug.spotless", version = "7.0.0.BETA4" }
+semver = { id = "com.xenoterracide.gradle.semver", version = "0.11.5" }
+dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
+lombok = { id = "name.remal.lombok", version = "2.2.14" }
+
+[libraries]
+directories = { group = "dev.dirs", name = "directories", version = "26" }
+apache-common-io = { group = "commons-io", name = "commons-io", version = "2.18.0" }
+apache-common-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "3.17.0" }
+apache-common-pool = { group = "org.apache.commons", name = "commons-pool2", version = "2.12.0" }
+apache-common-collection = { group = "org.apache.commons", name = "commons-collections4", version = "4.5.0-M3" }
+apache-common-text = { group = "org.apache.commons", name = "commons-text", version = "1.13.0" }
+
+slf4j = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+slf4jJdkPlatform = { group = "org.slf4j", name = "slf4j-jdk-platform-logging", version.ref = "slf4j" }
+slf4jJulBridage = { group = "org.slf4j", name = "jul-to-slf4j", version.ref = "slf4j" }
+
+vavr = { group = "io.vavr", name = "vavr", version = "1.0.0-alpha-4" }
+
+avaje-inject = { group = "io.avaje", name = "avaje-inject", version.ref = "avajeInject" }
+avaje-inject-test = { group = "io.avaje", name = "avaje-inject-test", version.ref = "avajeInject" }
+avaje-inject-generator = { group = "io.avaje", name = "avaje-inject-generator", version.ref = "avajeInject" }
+
+record-builder-core = { group = "io.soabase.record-builder", name = "record-builder-core", version.ref = "record-builder" }
+record-builder-processor = { group = "io.soabase.record-builder", name = "record-builder-processor", version.ref = "record-builder" }
+
+jetbrains-annotation = { group = "org.jetbrains", name = "annotations", version = "26.0.1" }
+
+guava = { group = "com.google.guava", name = "guava", version = "33.4.0-jre" }
+
+simpleicon = { group = "org.kordamp.ikonli", name = "ikonli-simpleicons-pack", version.ref = "ikonli" }
+fluentuiIcon = { group = "org.kordamp.ikonli", name = "ikonli-fluentui-pack", version.ref = "ikonli" }
+devicons = { group = "org.kordamp.ikonli", name = "ikonli-devicons-pack", version.ref = "ikonli" }
+materialIcons = { group = "org.kordamp.ikonli", name = "ikonli-materialdesign2-pack", version.ref = "ikonli" }
+fontawesome5 = { group = "org.kordamp.ikonli", name = "ikonli-fontawesome5-pack", version.ref = "ikonli" }
+testfx-junit5 = { group = "org.testfx", name = "testfx-junit5", version = "4.0.18" }
+atlantafx = { group = "io.github.mkpaz", name = "atlantafx-base", version = "2.0.1" }
+controlfx = { group = "org.controlsfx", name = "controlsfx", version = "11.2.1" }
+ikonliJavafx = { group = "org.kordamp.ikonli", name = "ikonli-javafx", version.ref = "ikonli" }
+
+logback = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.14" }
