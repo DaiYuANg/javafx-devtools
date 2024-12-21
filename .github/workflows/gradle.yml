@@ -14,31 +14,36 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
-        java: ['11', '17', '21']
+        os: [ ubuntu-latest, macOS-latest, windows-latest ]
+        java: [ '11', '17', '21' ]
       fail-fast: false
       max-parallel: 4
     name: Test JDK ${{ matrix.java }}, ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      # Checkout 代码
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
         with:
-          java-version: ${{ matrix.java }}
-      
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      
-      - name: Build with Gradle
-        run: ./gradlew jlinkZip
+          distribution: 'graalvm'
+          java-version: '21'
 
-      - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
-        name: Azure Blob Upload
+      - name: Build with Gradle (JLink)
+        run: ./gradlew clean build jpackage
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v4
         with:
-          connection_string: ${{ secrets.ConnectionString }}
-          container_name: downloads
-          source_folder: build/dist
-          destination_folder: scenic-view
-          delete_if_exists: true
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Upload JDK Image as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jdk-image
+          path: build/jpackage/

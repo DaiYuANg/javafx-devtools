@@ -58,3 +58,5 @@ eclipse-collections-api = { group = "org.eclipse.collections", name = "eclipse-c
 eclipse-collections = { group = "org.eclipse.collections", name = "eclipse-collections", version.ref = "eclipseCollections" }
 
 theme-detector = { group = "com.github.Dansoftowner", name = "jSystemThemeDetector", version = "3.9.1" }
+
+jna = {group="net.java.dev.jna",name="jna",version="5.10.0"}

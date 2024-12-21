@@ -26,6 +26,7 @@ module org.scenicview.scenicview {
   requires io.avaje.inject;
   requires com.google.common;
 
+  requires com.sun.jna;
   requires java.instrument;
   requires java.rmi;
   requires java.logging;

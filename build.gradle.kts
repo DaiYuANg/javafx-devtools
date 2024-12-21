@@ -1,3 +1,5 @@
+import org.apache.commons.lang3.SystemUtils
+
 plugins {
   application
   java
@@ -50,6 +52,8 @@ javafx {
 }
 
 tasks.jar {
+  dependsOn(tasks.collectReachabilityMetadata)
+  from(tasks.collectReachabilityMetadata)
   manifest {
     attributes(
       "Main-Class" to mainClassPath,
@@ -79,13 +83,23 @@ dependencies {
   implementation(libs.eclipse.collections.api)
   implementation(libs.eclipse.collections)
 
+  implementation(libs.jna)
+
   implementation(libs.theme.detector) {
-//    exclude(group = "net.java.dev.jna", module = "jna")
+    exclude(group = "net.java.dev.jna", module = "jna")
 //    exclude(group = "net.java.dev.jna", module = "jna-platform")
 //    exclude(group = "com.github.oshi", module = "oshi-core")
   }
 }
-//ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
+
+val platform = when {
+  SystemUtils.IS_OS_MAC -> "mac"
+  SystemUtils.IS_OS_WINDOWS -> "windows"
+  SystemUtils.IS_OS_LINUX -> "linux"
+  else -> {
+    throw IllegalStateException("Unsupported platform")
+  }
+}
 jlink {
   options = listOf("--strip-debug", "--no-header-files", "--no-man-pages")
   enableCds()
@@ -106,5 +120,10 @@ jlink {
 graalvmNative {
   metadataRepository {
     enabled = true
+  }
+  binaries {
+    named("main") {
+      sharedLibrary.set(false)
+    }
   }
 }
