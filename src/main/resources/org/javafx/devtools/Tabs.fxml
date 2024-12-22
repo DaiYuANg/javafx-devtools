@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="org.javafx.devtools.controller.TabsController">
+  <Tab text="Detail" closable="false">
+    <graphic>
+      <FontIcon iconLiteral="mdi2i-information-outline"/>
+    </graphic>
+    <fx:include source="NodeDetail.fxml"/>
+  </Tab>
+  <Tab text="Events" closable="false">
+    <graphic>
+      <FontIcon iconLiteral="mdi2b-book-clock-outline"/>
+    </graphic>
+    <fx:include source="NodeEvent.fxml"/>
+  </Tab>
+  <Tab text="JavaDoc" closable="false">
+    <graphic>
+      <FontIcon iconLiteral="di-java"/>
+    </graphic>
+    <fx:include source="JavaDoc.fxml"/>
+  </Tab>
+  <Tab text="3D" closable="false">
+    <graphic>
+      <FontIcon iconLiteral="mdi2r-rotate-3d"/>
+    </graphic>
+    <fx:include source="ThreeDom.fxml"/>
+  </Tab>
+  <Tab text="Stylesheet" closable="false">
+    <graphic>
+      <FontIcon iconLiteral="di-css3"/>
+    </graphic>
+    <fx:include source="CSS.fxml"/>
+  </Tab>
+</TabPane>

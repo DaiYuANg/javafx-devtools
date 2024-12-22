@@ -25,6 +25,7 @@ module org.scenicview.scenicview {
   requires static org.jetbrains.annotations;
   requires io.avaje.inject;
   requires com.google.common;
+  requires atlantafx.base;
 
   requires com.sun.jna;
   requires java.instrument;

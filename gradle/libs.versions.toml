@@ -52,7 +52,7 @@ atlantafx = { group = "io.github.mkpaz", name = "atlantafx-base", version = "2.0
 controlfx = { group = "org.controlsfx", name = "controlsfx", version = "11.2.1" }
 ikonliJavafx = { group = "org.kordamp.ikonli", name = "ikonli-javafx", version.ref = "ikonli" }
 
-logback = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.14" }
+logback = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.15" }
 
 eclipse-collections-api = { group = "org.eclipse.collections", name = "eclipse-collections-api", version.ref = "eclipseCollections" }
 eclipse-collections = { group = "org.eclipse.collections", name = "eclipse-collections", version.ref = "eclipseCollections" }

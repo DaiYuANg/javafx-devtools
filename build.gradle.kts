@@ -87,9 +87,16 @@ dependencies {
 
   implementation(libs.theme.detector) {
     exclude(group = "net.java.dev.jna", module = "jna")
-//    exclude(group = "net.java.dev.jna", module = "jna-platform")
-//    exclude(group = "com.github.oshi", module = "oshi-core")
   }
+
+  implementation(libs.ikonliJavafx)
+  implementation(libs.simpleicon)
+  implementation(libs.devicons)
+  implementation(libs.materialIcons)
+  implementation(libs.fontawesome5)
+  implementation(libs.controlfx)
+
+  testImplementation(libs.testfx.junit5)
 }
 
 val platform = when {

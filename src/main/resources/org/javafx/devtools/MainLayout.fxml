@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.javafx.devtools.controller.MainLayoutController"
+      prefHeight="800.0" prefWidth="800.0">
+  <BorderPane VBox.vgrow="ALWAYS">
+    <top>
+      <fx:include source="GlobalMenu.fxml"/>
+    </top>
+    <center>
+      <SplitPane dividerPositions="0.3,0.7">
+        <fx:include source="NodeTree.fxml"/>
+        <fx:include source="Tabs.fxml"/>
+      </SplitPane>
+    </center>
+    <bottom>
+      <HBox>
+        <Label text="bottom"/>
+      </HBox>
+    </bottom>
+  </BorderPane>
+</VBox>
