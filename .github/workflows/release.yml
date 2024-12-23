@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'liberica'
-          java-version: '21-fx'
+          java-version: '21'
 
       - name: Build with Gradle (JLink)
         run: ./gradlew clean build jpackage
