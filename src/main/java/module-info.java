@@ -36,6 +36,9 @@ module org.scenicview.scenicview {
   requires com.jthemedetector;
   requires org.checkerframework.checker.qual;
   requires io.avaje.inject.events;
+  requires org.apache.commons.lang3;
+  requires java.prefs;
+  requires org.kordamp.ikonli.javafx;
 
   opens org.scenicview.view.cssfx to javafx.fxml;
   opens org.scenicview.view.threedom to javafx.fxml;

@@ -35,7 +35,11 @@ import org.fxconnector.AppController;
 import org.fxconnector.AppControllerImpl;
 import org.fxconnector.StageControllerImpl;
 import org.fxconnector.remote.FXConnectorFactory;
+import org.javafx.devtools.constant.ConfigKey;
 import org.javafx.devtools.context.DIContext;
+import org.javafx.devtools.lifecycle.Lifecycle;
+import org.javafx.devtools.lifecycle.StageLifecycle;
+import org.javafx.devtools.service.ConfigService;
 import org.scenicview.model.attach.AttachHandlerFactory;
 import org.scenicview.model.update.LocalUpdateStrategy;
 import org.scenicview.model.update.RemoteVMsUpdateStrategy;
@@ -50,10 +54,15 @@ public class ScenicView extends Application {
 
   private final OsThemeDetector osThemeDetector = DIContext.INSTANCE.get(OsThemeDetector.class);
 
+  private final List<Lifecycle> lifecycles = DIContext.INSTANCE.getAll(Lifecycle.class);
+
+  private final List<StageLifecycle> stageLifecycles = DIContext.INSTANCE.getAll(StageLifecycle.class);
+
   @Override
   public void init() throws Exception {
     val theme = osThemeDetector.isDark() ? new PrimerDark() : new PrimerLight();
     Application.setUserAgentStylesheet(theme.getUserAgentStylesheet());
+    lifecycles.forEach(Lifecycle::onStart);
   }
 
   /**************************************************************************
@@ -110,7 +119,6 @@ public class ScenicView extends Application {
     ScenicViewGui.show(new ScenicViewGui(updateStrategy, stage), stage);
   }
 
-
   /**************************************************************************
    *
    * runtime discovery start point
@@ -149,6 +157,7 @@ public class ScenicView extends Application {
 
   @Override
   public void start(final Stage stage) throws Exception {
+    stageLifecycles.forEach(lifecycle -> lifecycle.beforeShown(stage));
     // This mode is only available when we are in the commercial Scenic View,
     // so we must start up the license checker and validate
 
@@ -170,10 +179,6 @@ public class ScenicView extends Application {
 //    setUserAgentStylesheet(STYLESHEET_MODENA);
 
     val strategy = new RemoteVMsUpdateStrategy();
-//    val alternativeStage = new Stage();
-//    val scene = DIContext.INSTANCE.get(Scene.class);
-//    alternativeStage.setScene(scene);
-//    alternativeStage.show();
 
     // workaround for RT-10714
     stage.setWidth(1024);
@@ -200,5 +205,14 @@ public class ScenicView extends Application {
       ExceptionLogger.submitException(e1);
     }
     log.atInfo().log("Server done");
+
+    val configService = DIContext.INSTANCE.get(ConfigService.class);
+
+    val alternativeStage = new Stage();
+    val scene = DIContext.INSTANCE.get(Scene.class);
+    configService.get(ConfigKey.STAGE_HEIGHT, Double.class).ifPresent(alternativeStage::setHeight);
+    configService.get(ConfigKey.STAGE_WIDTH, Double.class).ifPresent(alternativeStage::setWidth);
+    alternativeStage.setScene(scene);
+    alternativeStage.show();
   }
 }

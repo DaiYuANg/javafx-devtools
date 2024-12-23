@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.javafx.devtools.component.VirtualMachineDescriptorListView?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<VBox
+  xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="org.javafx.devtools.controller.dialog.AttachController"
+  prefHeight="400" prefWidth="700"
+  fx:id="root"
+>
+  <padding>
+    <Insets top="10" left="10" right="10" bottom="10"/>
+  </padding>
+  <HBox spacing="10" alignment="CENTER_LEFT">
+    <Label text="Select VM Instance"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Button fx:id="refreshButton" HBox.hgrow="NEVER">
+      <graphic>
+        <FontIcon iconLiteral="mdi2r-reload"/>
+      </graphic>
+    </Button>
+  </HBox>
+  <Separator/>
+  <StackPane VBox.vgrow="ALWAYS">
+    <VirtualMachineDescriptorListView fx:id="vmList"/>
+    <ProgressIndicator fx:id="loadingIndicator" maxWidth="50" maxHeight="50" visible="false"/>
+  </StackPane>
+</VBox>

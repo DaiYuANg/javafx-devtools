@@ -9,6 +9,8 @@ public enum ViewConstant {
 
   MAIN_LAYOUT("MainLayout"),
 
+  ATTACH_DIALOG("dialog/Attach"),
+
   ABOUT_DIALOG("dialog/About");
 
   private final String viewName;

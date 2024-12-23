@@ -31,4 +31,5 @@
   </root>
   <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
   <logger name="io.avaje.inject" level="TRACE"/>
+  <logger name="org.javafx.devtools" level="DEBUG"/>
 </configuration>

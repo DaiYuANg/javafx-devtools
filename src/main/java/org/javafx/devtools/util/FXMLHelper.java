@@ -25,7 +25,6 @@ public class FXMLHelper {
 
   private final FXMLLoadListener loadListener;
 
-  // 使用 Guava 的 Maps.newHashMap() 替代 Eclipse Collections 的 Maps.mutable.empty()
   private final Map<ViewConstant, Pair<Parent, Object>> fxmlCache = Maps.newHashMap();
 
   public <T extends Parent> T loadView(@NotNull ViewConstant prefix, @NotNull Class<T> type) {

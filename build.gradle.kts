@@ -79,6 +79,8 @@ dependencies {
 
   implementation(libs.atlantafx)
 
+  implementation(libs.apache.common.lang3)
+
   implementation(libs.guava)
   implementation(libs.vavr)
 
