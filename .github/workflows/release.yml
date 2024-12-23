@@ -57,7 +57,7 @@ jobs:
           path: build/jpackage/
 
       - name: Create GitHub Release
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "release.tar.gz,build/jpackage/*.*"
           generateReleaseNotes: true
