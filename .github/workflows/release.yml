@@ -60,12 +60,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifacts:
-            - build/jpackage/*.app
-            - build/jpackage/*.dmg
-            - build/jpackage/*.exe
-            - build/jpackage/*.deb
-            - build/jpackage/*.rpm
+          artifacts: "build/jpackage/*.app,build/jpackage/*.dmg,build/jpackage/*.exe,build/jpackage/*.deb,build/jpackage/*.rpm"
           generateReleaseNotes: true
           tag: v0.0.1
 #      - name: Upload Release Asset
