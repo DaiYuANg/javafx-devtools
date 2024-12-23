@@ -18,7 +18,6 @@
 package org.scenicview.view.cssfx;
 
 import java.util.function.Predicate;
-
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
@@ -32,7 +31,6 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-
 import org.scenicview.view.ScenicViewGui;
 
 public class CSSFXTabContentController {

@@ -26,8 +26,6 @@
  */
 package org.scenicview.utils;
 
-import java.security.AccessController;
-import java.security.PrivilegedAction;
 
 /**
  * Represents operating system with appropriate properties 

@@ -23,7 +23,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
-
 import org.scenicview.view.DisplayUtils;
 
 /**

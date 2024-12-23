@@ -17,12 +17,10 @@
  */
 package org.scenicview.model.update;
 
-import org.fxconnector.AppController;
-import org.fxconnector.StageController;
-
 import java.util.ArrayList;
 import java.util.List;
-
+import org.fxconnector.AppController;
+import org.fxconnector.StageController;
 import org.fxconnector.helper.WorkerThread;
 import org.fxconnector.remote.FXConnector;
 import org.scenicview.utils.ExceptionLogger;

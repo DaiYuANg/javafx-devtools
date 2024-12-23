@@ -22,10 +22,9 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Menu;
 import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
-
 import org.fxconnector.node.SVNode;
-import org.scenicview.utils.ExceptionLogger;
 import org.javafx.devtools.component.ProgressWebView;
+import org.scenicview.utils.ExceptionLogger;
 import org.scenicview.view.ContextMenuContainer;
 import org.scenicview.view.DisplayUtils;
 import org.scenicview.view.ScenicViewGui;

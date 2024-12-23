@@ -19,10 +19,8 @@ package org.fxconnector.remote;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-
 import org.fxconnector.Configuration;
 import org.fxconnector.StageID;
-
 import org.fxconnector.details.DetailPaneType;
 import org.fxconnector.event.FXConnectorEventDispatcher;
 import org.fxconnector.node.SVNode;

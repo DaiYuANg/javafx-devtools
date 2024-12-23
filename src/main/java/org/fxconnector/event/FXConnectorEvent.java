@@ -18,7 +18,6 @@
 package org.fxconnector.event;
 
 import java.io.Serializable;
-
 import org.fxconnector.StageID;
 
 

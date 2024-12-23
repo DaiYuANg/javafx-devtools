@@ -22,7 +22,6 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.LinkedList;
 import java.util.List;
-
 import org.fxconnector.Configuration;
 import org.fxconnector.StageID;
 import org.fxconnector.details.DetailPaneType;

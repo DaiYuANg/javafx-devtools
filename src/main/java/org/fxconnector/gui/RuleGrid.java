@@ -18,7 +18,6 @@
 package org.fxconnector.gui;
 
 import java.util.*;
-
 import javafx.scene.shape.*;
 
 /**

@@ -21,10 +21,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import javafx.beans.value.ObservableValue;
 import javafx.scene.Node;
-
 import org.fxconnector.PropertyTracker;
 import org.fxconnector.StageID;
 import org.fxconnector.details.Detail.LabelType;

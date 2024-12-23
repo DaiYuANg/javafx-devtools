@@ -23,7 +23,6 @@ import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.OverrunStyle;
 import javafx.scene.text.TextAlignment;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.FXConnectorEventDispatcher;
 

@@ -33,7 +33,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import org.scenicview.view.ScenicViewGui;
 
 public class SubmitExceptionDialog {

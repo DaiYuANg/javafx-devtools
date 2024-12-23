@@ -18,10 +18,8 @@
  package org.scenicview.model;
 
 import java.util.*;
-
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import org.scenicview.utils.PropertiesUtils;
 
 public class Persistence {

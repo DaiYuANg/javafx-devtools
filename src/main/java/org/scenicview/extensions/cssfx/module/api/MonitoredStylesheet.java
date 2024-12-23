@@ -18,7 +18,6 @@
 package org.scenicview.extensions.cssfx.module.api;
 
 import java.nio.file.Path;
-
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 

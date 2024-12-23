@@ -13,6 +13,7 @@ plugins {
   alias(libs.plugins.spotless)
   alias(libs.plugins.maniftest)
   alias(libs.plugins.dotenv)
+  alias(libs.plugins.javamodularity)
 }
 
 val mainClassPath = "org.javafx.devtools.DevtoolsApplication"
@@ -38,7 +39,7 @@ repositories {
 }
 
 javafx {
-  version = "21"
+  version = "23"
   modules = listOf(
     "javafx.base",
     "javafx.controls",
@@ -132,5 +133,14 @@ graalvmNative {
     named("main") {
       sharedLibrary.set(false)
     }
+  }
+}
+
+spotless {
+  java {
+    target("**/*.java")
+    removeUnusedImports()
+    importOrder()
+    indentWithSpaces(2)
   }
 }

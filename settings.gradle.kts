@@ -26,4 +26,4 @@ buildCache {
 develocity { buildScan { termsOfUseAgree.set("true") } }
 
 
-rootProject.name = "scenic-view"
+rootProject.name = "javafx-devtools"

@@ -24,7 +24,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
-
 import org.fxconnector.ConnectorUtils;
 import org.fxconnector.StageController;
 import org.fxconnector.node.SVNode;

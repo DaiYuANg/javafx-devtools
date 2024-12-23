@@ -17,20 +17,18 @@
  */
 package org.scenicview;
 
+import atlantafx.base.theme.PrimerDark;
+import atlantafx.base.theme.PrimerLight;
+import com.jthemedetecor.OsThemeDetector;
 import java.lang.instrument.Instrumentation;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
-
-import atlantafx.base.theme.PrimerDark;
-import atlantafx.base.theme.PrimerLight;
-import com.jthemedetecor.OsThemeDetector;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.fxconnector.AppController;

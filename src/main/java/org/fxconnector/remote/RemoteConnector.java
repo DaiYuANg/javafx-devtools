@@ -18,7 +18,6 @@
 package org.fxconnector.remote;
 
 import java.rmi.*;
-
 import org.fxconnector.event.FXConnectorEvent;
 
 

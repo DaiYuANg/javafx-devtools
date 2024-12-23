@@ -18,7 +18,6 @@
 package org.fxconnector.node;
 
 import java.util.List;
-
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 

@@ -18,13 +18,11 @@
 package org.fxconnector;
 
 import java.util.*;
-
-import org.fxconnector.helper.ChildrenGetter;
-
 import javafx.geometry.*;
 import javafx.scene.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
+import org.fxconnector.helper.ChildrenGetter;
 
 class SCUtils {
 

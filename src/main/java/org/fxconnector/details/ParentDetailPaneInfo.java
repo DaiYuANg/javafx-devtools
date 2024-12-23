@@ -18,9 +18,9 @@
 package org.fxconnector.details;
 
 import static org.fxconnector.ConnectorUtils.getBranchCount;
+
 import javafx.scene.Node;
 import javafx.scene.Parent;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.FXConnectorEventDispatcher;
 

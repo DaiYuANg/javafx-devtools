@@ -22,11 +22,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import javafx.application.Platform;
 import javafx.stage.PopupWindow;
 import javafx.stage.Window;
-
 import org.fxconnector.StageControllerImpl;
 
 public class SubWindowChecker extends WindowChecker {

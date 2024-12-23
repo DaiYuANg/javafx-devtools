@@ -3,6 +3,7 @@ package org.javafx.devtools.util;
 import com.google.common.base.Preconditions;
 import io.vavr.control.Try;
 import jakarta.inject.Singleton;
+import java.nio.charset.StandardCharsets;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Pair;
@@ -14,8 +15,6 @@ import org.javafx.devtools.DevtoolsApplication;
 import org.javafx.devtools.constant.ViewConstant;
 import org.javafx.devtools.context.DIContext;
 import org.jetbrains.annotations.NotNull;
-
-import java.nio.charset.StandardCharsets;
 
 @Singleton
 @Slf4j

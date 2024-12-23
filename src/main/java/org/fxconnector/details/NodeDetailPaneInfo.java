@@ -20,7 +20,6 @@ package org.fxconnector.details;
 import static org.fxconnector.ConnectorUtils.boundsToString;
 
 import java.util.Set;
-
 import javafx.beans.value.WritableValue;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableMap;
@@ -31,7 +30,6 @@ import javafx.scene.effect.Effect;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Transform;
-
 import org.fxconnector.ConnectorUtils;
 import org.fxconnector.StageID;
 import org.fxconnector.details.Detail.LabelType;

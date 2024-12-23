@@ -18,7 +18,6 @@
 package org.fxconnector.node;
 
 import java.io.Serializable;
-
 import javafx.scene.image.Image;
 
 abstract class SVNodeImpl implements SVNode, Serializable {

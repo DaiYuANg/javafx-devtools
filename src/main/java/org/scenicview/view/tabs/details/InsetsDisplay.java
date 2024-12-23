@@ -18,6 +18,7 @@
 package org.scenicview.view.tabs.details;
 
 import static org.scenicview.view.DisplayUtils.DFMT;
+
 import javafx.geometry.*;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;

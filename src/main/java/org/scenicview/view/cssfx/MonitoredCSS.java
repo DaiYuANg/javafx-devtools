@@ -22,8 +22,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class MonitoredCSS {
-    private StringProperty css = new SimpleStringProperty();
-    private StringProperty mappedBy = new SimpleStringProperty();
+    private final StringProperty css = new SimpleStringProperty();
+    private final StringProperty mappedBy = new SimpleStringProperty();
     
     public MonitoredCSS(String css) {
         this.css.set(css);

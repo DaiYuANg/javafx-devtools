@@ -28,12 +28,10 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Consumer;
 import java.util.function.Function;
-
 import javafx.application.Platform;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -48,7 +46,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-
 import org.scenicview.extensions.cssfx.module.api.CSSFXEvent;
 import org.scenicview.extensions.cssfx.module.api.CSSFXEvent.EventType;
 import org.scenicview.extensions.cssfx.module.api.MonitoredStylesheet;

@@ -20,7 +20,6 @@ package org.scenicview.view.tabs.details;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
-
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.value.WritableValue;
@@ -34,7 +33,6 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
-
 import org.fxconnector.ConnectorUtils;
 import org.fxconnector.details.Detail;
 import org.fxconnector.details.Detail.EditionType;

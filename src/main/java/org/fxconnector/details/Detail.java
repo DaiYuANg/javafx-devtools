@@ -21,13 +21,11 @@ import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.Property;
 import javafx.beans.value.WritableValue;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.Region;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.DetailsEvent;
 import org.fxconnector.event.FXConnectorEvent.SVEventType;

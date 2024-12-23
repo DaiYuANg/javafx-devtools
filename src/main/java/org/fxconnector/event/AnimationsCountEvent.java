@@ -17,9 +17,9 @@
  */
 package org.fxconnector.event;
 
+import java.util.*;
 import org.fxconnector.SVAnimation;
 import org.fxconnector.StageID;
-import java.util.*;
 
 
 

@@ -20,17 +20,14 @@ package org.fxconnector.remote;
 import java.lang.instrument.Instrumentation;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
-
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-
 import org.fxconnector.AppControllerImpl;
 import org.fxconnector.Configuration;
 import org.fxconnector.ConnectorUtils;

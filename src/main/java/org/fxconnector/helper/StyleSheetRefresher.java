@@ -20,11 +20,9 @@ package org.fxconnector.helper;
 import java.io.File;
 import java.net.URL;
 import java.util.*;
-
-import org.scenicview.utils.ExceptionLogger;
-
 import javafx.application.Platform;
 import javafx.scene.Scene;
+import org.scenicview.utils.ExceptionLogger;
 
 public class StyleSheetRefresher extends WorkerThread {
     final Scene scene;

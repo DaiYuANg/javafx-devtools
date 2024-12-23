@@ -17,16 +17,9 @@
  */
 package org.scenicview.view.tabs.details;
 
-import org.scenicview.utils.Logger;
-import org.scenicview.view.DisplayUtils;
-import org.scenicview.view.ScenicViewGui;
-import org.fxconnector.details.Detail;
-import org.fxconnector.details.DetailPaneType;
-
 import java.text.DecimalFormat;
 import java.util.*;
 import java.util.function.Consumer;
-
 import javafx.beans.value.WritableValue;
 import javafx.geometry.*;
 import javafx.scene.*;
@@ -35,8 +28,12 @@ import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
-
+import org.fxconnector.details.Detail;
 import org.fxconnector.details.Detail.EditionType;
+import org.fxconnector.details.DetailPaneType;
+import org.scenicview.utils.Logger;
+import org.scenicview.view.DisplayUtils;
+import org.scenicview.view.ScenicViewGui;
 
 public class GDetailPane extends TitledPane {
 

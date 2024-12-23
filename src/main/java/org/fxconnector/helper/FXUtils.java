@@ -17,7 +17,6 @@
  */
 package org.fxconnector.helper;
 
-import java.util.Iterator;
 
 import javafx.collections.ObservableList;
 import javafx.scene.Node;

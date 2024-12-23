@@ -19,7 +19,6 @@ package org.scenicview.view.tabs;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -30,7 +29,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.SVGPath;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.EvCSSFXEvent;
 import org.fxconnector.event.FXConnectorEvent;

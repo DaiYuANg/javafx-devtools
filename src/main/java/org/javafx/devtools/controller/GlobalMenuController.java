@@ -1,7 +1,8 @@
 package org.javafx.devtools.controller;
 
 import jakarta.inject.Singleton;
-import javafx.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
@@ -13,9 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.javafx.devtools.constant.ViewConstant;
 import org.javafx.devtools.util.FXMLHelper;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 @Singleton
 @Slf4j

@@ -22,7 +22,6 @@ import javafx.scene.Node;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextBoundsType;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.FXConnectorEventDispatcher;
 

@@ -26,14 +26,13 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
 import org.fxconnector.node.SVNode;
-import org.scenicview.view.threedom.ThreeDOM;
-import org.scenicview.view.threedom.Tile3D;
 import org.scenicview.view.ContextMenuContainer;
 import org.scenicview.view.DisplayUtils;
 import org.scenicview.view.ScenicViewGui;
 import org.scenicview.view.threedom.IThreeDOM;
+import org.scenicview.view.threedom.ThreeDOM;
+import org.scenicview.view.threedom.Tile3D;
 
 public class ThreeDOMTab extends Tab implements ContextMenuContainer, IThreeDOM {
 

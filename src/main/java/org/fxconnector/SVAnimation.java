@@ -18,7 +18,6 @@
 package org.fxconnector;
 
 import java.io.Serializable;
-
 import javafx.animation.Animation;
 
 public final class SVAnimation implements Serializable {

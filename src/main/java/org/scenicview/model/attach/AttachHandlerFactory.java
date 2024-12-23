@@ -27,10 +27,8 @@ import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
-
 import org.scenicview.ScenicView;
 import org.scenicview.utils.*;
 

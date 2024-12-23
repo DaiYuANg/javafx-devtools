@@ -21,7 +21,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import javafx.beans.binding.DoubleBinding;
 import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.beans.value.ChangeListener;
@@ -52,14 +51,13 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
-
 import org.fxconnector.event.EvLogEvent;
 import org.fxconnector.node.SVNode;
-import org.scenicview.view.control.FilterTextField;
-import org.scenicview.view.dialog.InfoBox;
 import org.scenicview.view.ContextMenuContainer;
 import org.scenicview.view.DisplayUtils;
 import org.scenicview.view.ScenicViewGui;
+import org.scenicview.view.control.FilterTextField;
+import org.scenicview.view.dialog.InfoBox;
 
 public class EventLogTab extends Tab implements ContextMenuContainer {
 

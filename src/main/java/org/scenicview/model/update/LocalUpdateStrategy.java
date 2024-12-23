@@ -18,7 +18,6 @@
 package org.scenicview.model.update;
 
 import java.util.List;
-
 import org.fxconnector.AppController;
 
 /**

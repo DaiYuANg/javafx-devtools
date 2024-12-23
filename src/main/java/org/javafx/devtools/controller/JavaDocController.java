@@ -1,14 +1,13 @@
 package org.javafx.devtools.controller;
 
 import jakarta.inject.Singleton;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.javafx.devtools.component.ProgressWebView;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 @Singleton
 @RequiredArgsConstructor

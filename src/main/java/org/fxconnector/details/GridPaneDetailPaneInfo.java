@@ -24,7 +24,6 @@ import javafx.scene.Node;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-
 import org.fxconnector.StageID;
 import org.fxconnector.details.Detail.ValueType;
 import org.fxconnector.event.FXConnectorEventDispatcher;

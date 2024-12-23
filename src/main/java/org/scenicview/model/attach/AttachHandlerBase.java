@@ -17,10 +17,10 @@
  */
 package org.scenicview.model.attach;
 
+import static org.scenicview.model.attach.AttachHandlerFactory.doBasicJdkSearch;
+
 import java.io.File;
 import java.util.List;
-
-import static org.scenicview.model.attach.AttachHandlerFactory.doBasicJdkSearch;
 
 /**
  *

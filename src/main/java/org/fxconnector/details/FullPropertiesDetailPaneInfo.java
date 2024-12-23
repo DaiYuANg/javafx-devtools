@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
-
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.Property;
 import javafx.beans.property.ReadOnlyProperty;
@@ -45,7 +44,6 @@ import javafx.scene.layout.BorderImage;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderWidths;
 import javafx.scene.paint.Color;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.FXConnectorEventDispatcher;
 import org.scenicview.utils.Logger;

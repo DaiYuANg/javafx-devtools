@@ -19,7 +19,6 @@ package org.fxconnector.details;
 
 import javafx.scene.Node;
 import javafx.scene.shape.Shape;
-
 import org.fxconnector.StageID;
 import org.fxconnector.details.Detail.ValueType;
 import org.fxconnector.event.FXConnectorEventDispatcher;

@@ -18,7 +18,6 @@
 package org.fxconnector.remote;
 
 import java.util.List;
-
 import org.fxconnector.AppController;
 
 public interface FXConnector {

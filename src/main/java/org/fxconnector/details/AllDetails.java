@@ -18,7 +18,6 @@
 package org.fxconnector.details;
 
 import javafx.scene.Node;
-
 import org.fxconnector.StageID;
 import org.fxconnector.event.FXConnectorEventDispatcher;
 

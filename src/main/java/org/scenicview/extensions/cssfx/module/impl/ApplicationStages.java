@@ -20,7 +20,6 @@ package org.scenicview.extensions.cssfx.module.impl;
 import static org.scenicview.extensions.cssfx.module.impl.log.CSSFXLogger.logger;
 
 import java.lang.reflect.Method;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.stage.Stage;

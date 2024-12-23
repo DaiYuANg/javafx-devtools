@@ -17,11 +17,10 @@
  */
 package org.fxconnector.event;
 
+import java.util.List;
+import org.fxconnector.StageID;
 import org.fxconnector.details.Detail;
 import org.fxconnector.details.DetailPaneType;
-import java.util.List;
-
-import org.fxconnector.StageID;
 
 
 public class DetailsEvent extends FXConnectorEvent {

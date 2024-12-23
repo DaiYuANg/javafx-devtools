@@ -19,7 +19,6 @@ package org.fxconnector.details;
 
 import javafx.scene.Node;
 import javafx.scene.control.Control;
-
 import lombok.val;
 import org.fxconnector.ConnectorUtils;
 import org.fxconnector.StageID;

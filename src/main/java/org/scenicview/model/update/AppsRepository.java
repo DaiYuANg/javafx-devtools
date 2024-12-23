@@ -19,9 +19,7 @@ package org.scenicview.model.update;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javafx.application.Platform;
-
 import org.fxconnector.AppController;
 import org.fxconnector.StageController;
 import org.scenicview.utils.Logger;

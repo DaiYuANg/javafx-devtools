@@ -19,15 +19,11 @@ package org.fxconnector.helper;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
-
 import javafx.collections.ObservableList;
 import javafx.stage.Window;
-
 import org.fxconnector.StageController;
 import org.scenicview.utils.ExceptionLogger;
-import org.scenicview.utils.Logger;
 
 public abstract class WindowChecker extends WorkerThread {
 

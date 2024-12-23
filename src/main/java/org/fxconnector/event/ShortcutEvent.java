@@ -18,7 +18,6 @@
 package org.fxconnector.event;
 
 import javafx.scene.input.KeyCode;
-
 import org.fxconnector.StageID;
 
 public class ShortcutEvent extends FXConnectorEvent {

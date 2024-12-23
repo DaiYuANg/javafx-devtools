@@ -27,7 +27,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.Properties;
-
 import org.scenicview.view.ScenicViewGui;
 import org.scenicview.view.dialog.SubmitExceptionDialog;
 

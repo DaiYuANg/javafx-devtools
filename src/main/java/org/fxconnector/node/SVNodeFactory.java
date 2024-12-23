@@ -18,10 +18,8 @@
 package org.fxconnector.node;
 
 import java.util.List;
-
 import javafx.scene.Node;
 import javafx.scene.Parent;
-
 import org.fxconnector.Configuration;
 
 public class SVNodeFactory {

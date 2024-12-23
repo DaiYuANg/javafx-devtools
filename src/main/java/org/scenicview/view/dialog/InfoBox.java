@@ -31,7 +31,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
-
 import org.fxconnector.StageController;
 import org.scenicview.view.ScenicViewGui;
 

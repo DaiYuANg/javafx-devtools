@@ -17,13 +17,7 @@
  */
 package org.scenicview.view.dialog;
 
-import org.scenicview.utils.PropertiesUtils;
-import org.scenicview.view.DisplayUtils;
-import org.scenicview.view.ScenicViewGui;
-import org.scenicview.ScenicView;
-
 import java.util.Properties;
-
 import javafx.event.*;
 import javafx.geometry.*;
 import javafx.scene.*;
@@ -31,8 +25,11 @@ import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import javafx.stage.*;
-
 import org.fxconnector.StageController;
+import org.scenicview.ScenicView;
+import org.scenicview.utils.PropertiesUtils;
+import org.scenicview.view.DisplayUtils;
+import org.scenicview.view.ScenicViewGui;
 
 public class AboutBox {
     private static final int SCENE_WIDTH = 476;
@@ -58,7 +55,7 @@ public class AboutBox {
                 stage.close();
             }
         });
-        VBox.setMargin(this.footer, new Insets(SPACER_Y / 2, LEFT_AND_RIGHT_MARGIN, SPACER_Y / 2, LEFT_AND_RIGHT_MARGIN));
+        VBox.setMargin(this.footer, new Insets((double) SPACER_Y / 2, LEFT_AND_RIGHT_MARGIN, SPACER_Y / 2, LEFT_AND_RIGHT_MARGIN));
 
         this.header = new ImageView(DisplayUtils.getUIImage("about-header.png"));
         this.header.setId("AboutHeader");

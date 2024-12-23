@@ -17,14 +17,7 @@
  */
 package org.scenicview.view.tabs;
 
-import org.fxconnector.StageID;
-import org.fxconnector.SVAnimation;
-import org.scenicview.view.ContextMenuContainer;
-import org.scenicview.view.DisplayUtils;
-import org.scenicview.view.ScenicViewGui;
-
 import java.util.*;
-
 import javafx.collections.*;
 import javafx.event.EventHandler;
 import javafx.geometry.*;
@@ -34,6 +27,11 @@ import javafx.scene.image.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.util.Callback;
+import org.fxconnector.SVAnimation;
+import org.fxconnector.StageID;
+import org.scenicview.view.ContextMenuContainer;
+import org.scenicview.view.DisplayUtils;
+import org.scenicview.view.ScenicViewGui;
 
 
 public class AnimationsTab extends Tab implements ContextMenuContainer {
