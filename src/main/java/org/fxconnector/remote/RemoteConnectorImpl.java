@@ -20,7 +20,6 @@ package org.fxconnector.remote;
 import com.sun.tools.attach.AttachNotSupportedException;
 import com.sun.tools.attach.VirtualMachine;
 import com.sun.tools.attach.VirtualMachineDescriptor;
-
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -39,7 +38,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lombok.SneakyThrows;
 import org.fxconnector.AppController;
 import org.fxconnector.AppControllerImpl;

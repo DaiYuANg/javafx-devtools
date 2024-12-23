@@ -25,7 +25,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import javafx.animation.Animation;
 import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
@@ -40,10 +39,8 @@ import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.index.qual.SameLen;
 import org.fxconnector.helper.ChildrenGetter;
 import org.fxconnector.node.SVNode;
-import org.scenicview.utils.ExceptionLogger;
 
 @Slf4j
 public class ConnectorUtils {

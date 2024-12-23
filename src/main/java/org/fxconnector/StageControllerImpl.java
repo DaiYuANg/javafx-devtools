@@ -23,7 +23,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
-
 import javafx.animation.Animation;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;

@@ -20,14 +20,12 @@ package org.fxconnector;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.value.ObservableValue;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.scenicview.utils.ExceptionLogger;
 
 @SuppressWarnings("rawtypes")
 @Slf4j
