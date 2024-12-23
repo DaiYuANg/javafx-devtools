@@ -32,11 +32,10 @@ module org.scenicview.scenicview {
   requires java.rmi;
   requires java.logging;
   requires jdk.attach;
-  requires org.eclipse.collections.api;
-  requires org.eclipse.collections.impl;
   requires io.vavr;
   requires com.jthemedetector;
   requires org.checkerframework.checker.qual;
+  requires io.avaje.inject.events;
 
   opens org.scenicview.view.cssfx to javafx.fxml;
   opens org.scenicview.view.threedom to javafx.fxml;

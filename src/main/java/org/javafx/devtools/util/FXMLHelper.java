@@ -1,16 +1,16 @@
 package org.javafx.devtools.util;
 
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Maps;
 import io.vavr.control.Try;
 import jakarta.inject.Singleton;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Pair;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.eclipse.collections.api.factory.Maps;
-import org.eclipse.collections.api.map.MutableMap;
 import org.javafx.devtools.DevtoolsApplication;
 import org.javafx.devtools.constant.ViewConstant;
 import org.javafx.devtools.context.DIContext;
@@ -25,10 +25,11 @@ public class FXMLHelper {
 
   private final FXMLLoadListener loadListener;
 
-  private final MutableMap<ViewConstant, Pair<Parent, Object>> fxmlCache = Maps.mutable.empty();
+  // 使用 Guava 的 Maps.newHashMap() 替代 Eclipse Collections 的 Maps.mutable.empty()
+  private final Map<ViewConstant, Pair<Parent, Object>> fxmlCache = Maps.newHashMap();
 
   public <T extends Parent> T loadView(@NotNull ViewConstant prefix, @NotNull Class<T> type) {
-    return Try.of(() -> fxmlCache.getIfAbsent(prefix, () -> loadFromDisk(prefix)))
+    return Try.of(() -> fxmlCache.computeIfAbsent(prefix, this::loadFromDisk))
       .mapTry(Pair::getKey)
       .andThenTry(view -> Preconditions.checkArgument(type.isInstance(view), "FXML cache contains a mismatched type."))
       .map(type::cast)
@@ -37,7 +38,7 @@ public class FXMLHelper {
   }
 
   public <T extends Parent> T loadController(@NotNull ViewConstant prefix, @NotNull Class<T> type) {
-    return Try.of(() -> fxmlCache.getIfAbsent(prefix, () -> loadFromDisk(prefix)))
+    return Try.of(() -> fxmlCache.computeIfAbsent(prefix, this::loadFromDisk))
       .mapTry(Pair::getValue)
       .andThenTry(view -> Preconditions.checkArgument(type.isInstance(view), "Controller cache contains a mismatched type."))
       .map(type::cast)
@@ -45,7 +46,7 @@ public class FXMLHelper {
   }
 
   public <T extends Parent, C> Pair<T, C> load(@NotNull ViewConstant prefix, @NotNull Class<T> type, Class<C> clazz) {
-    return Try.of(() -> fxmlCache.getIfAbsent(prefix, () -> loadFromDisk(prefix)))
+    return Try.of(() -> fxmlCache.computeIfAbsent(prefix, this::loadFromDisk))
       .andThenTry(view -> {
         Preconditions.checkArgument(type.isInstance(view.getKey()), "FXML cache contains a mismatched type.");
         Preconditions.checkArgument(clazz.isInstance(view.getValue()), "Controller cache contains a mismatched type.");

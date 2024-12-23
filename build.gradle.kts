@@ -1,4 +1,5 @@
 import org.apache.commons.lang3.SystemUtils
+import org.beryx.jlink.JPackageTask
 
 plugins {
   application
@@ -81,9 +82,6 @@ dependencies {
   implementation(libs.guava)
   implementation(libs.vavr)
 
-  implementation(libs.eclipse.collections.api)
-  implementation(libs.eclipse.collections)
-
   implementation(libs.jna)
 
   implementation(libs.theme.detector) {
@@ -109,21 +107,34 @@ val platform = when {
   }
 }
 jlink {
-  options = listOf("--strip-debug", "--no-header-files", "--no-man-pages")
+  options = listOf("--strip-debug", "--compress", "2", "--no-header-files", "--no-man-pages")
   enableCds()
   mainClass.set(mainClassPath)
   moduleName.set(mainModulePath)
-  addExtraDependencies("javafx", "jakarta", "eclipse.collections")
+  addExtraDependencies("javafx", "jakarta", "avaje")
   launcher {
     name = "scenicView"
   }
   mergedModule {
     addExtraDependencies("javafx")
+    mergedModule {
+      requires("javafx.web")
+      requires("com.google.j2objc.annotations");
+      requires("com.google.errorprone.annotations");
+      requires("java.logging");
+      requires("org.checkerframework.checker.qual");
+      requires("java.desktop");
+      requires("java.datatransfer");
+      requires("org.slf4j");
+      requires("jdk.unsupported");
+    }
   }
-//    imageDir = layout.buildDirectory.dir("scenicview")
-//    imageZip = layout.buildDirectory.file("dist/scenicview-${JavaVersion.current()}-${platform}.zip")
+  jpackage {
+    imageName = "javafx-devtools"
+    icon = "icon/logo.icns"
+    jvmArgs = JvmArguments
+  }
 }
-
 
 graalvmNative {
   metadataRepository {
@@ -143,4 +154,8 @@ spotless {
     importOrder()
     indentWithSpaces(2)
   }
+}
+
+java {
+  modularity.inferModulePath.set(true)
 }

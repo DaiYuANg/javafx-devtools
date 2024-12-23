@@ -3,7 +3,7 @@ avajeInject = "11.1-RC1"
 record-builder = "44"
 ikonli = "12.3.1"
 slf4j = "2.0.16"
-eclipseCollections = "12.0.0.M3"
+eclipseCollections = "11.1.0"
 
 [plugins]
 javafx = { id = "org.openjfx.javafxplugin", version = "0.1.0" }
