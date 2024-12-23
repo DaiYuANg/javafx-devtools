@@ -53,5 +53,5 @@ jobs:
       - name: Upload JDK Image as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: jdk-image
+          name: javafx-devtools-${{ runner.os }}
           path: build/jpackage/
