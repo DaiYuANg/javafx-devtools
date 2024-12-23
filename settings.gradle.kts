@@ -44,3 +44,5 @@ gitHooks {
 }
 
 rootProject.name = "javafx-devtools"
+include("devtools-agent")
+include("devtools-ui")
