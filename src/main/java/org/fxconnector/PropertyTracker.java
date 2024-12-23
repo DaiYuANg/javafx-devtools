@@ -25,6 +25,7 @@ import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.value.ObservableValue;
 import lombok.Getter;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.scenicview.utils.ExceptionLogger;
 
@@ -56,6 +57,7 @@ public abstract class PropertyTracker {
     properties.clear();
   }
 
+  @SneakyThrows
   public void setTarget(final Object target) {
     properties.clear();
     // Using reflection, locate all properties and their corresponding
