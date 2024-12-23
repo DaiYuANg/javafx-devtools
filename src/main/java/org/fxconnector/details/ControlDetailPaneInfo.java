@@ -20,6 +20,7 @@ package org.fxconnector.details;
 import javafx.scene.Node;
 import javafx.scene.control.Control;
 
+import lombok.val;
 import org.fxconnector.ConnectorUtils;
 import org.fxconnector.StageID;
 import org.fxconnector.event.FXConnectorEventDispatcher;
@@ -52,7 +53,7 @@ class ControlDetailPaneInfo extends DetailPaneInfo {
     }
 
     @Override protected void updateDetail(final String propertyName) {
-        final boolean all = propertyName.equals("*") ? true : false;
+        val all = propertyName.equals("*");
 
         final Control control = (Control) getTarget();
         if (all || propertyName.equals("minWidth") || propertyName.equals("minHeight")) {

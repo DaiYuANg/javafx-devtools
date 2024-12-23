@@ -25,7 +25,7 @@ import javafx.scene.image.ImageView;
 
 import org.fxconnector.node.SVNode;
 import org.scenicview.utils.ExceptionLogger;
-import org.scenicview.view.control.ProgressWebView;
+import org.javafx.devtools.component.ProgressWebView;
 import org.scenicview.view.ContextMenuContainer;
 import org.scenicview.view.DisplayUtils;
 import org.scenicview.view.ScenicViewGui;

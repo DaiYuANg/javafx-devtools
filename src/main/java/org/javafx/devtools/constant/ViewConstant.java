@@ -7,7 +7,9 @@ import lombok.RequiredArgsConstructor;
 @Getter
 public enum ViewConstant {
 
-  MAIN_LAYOUT("MainLayout");
+  MAIN_LAYOUT("MainLayout"),
+
+  ABOUT_DIALOG("dialog/About");
 
   private final String viewName;
 }

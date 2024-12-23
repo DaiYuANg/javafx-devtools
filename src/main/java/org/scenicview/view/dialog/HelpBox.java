@@ -27,7 +27,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import org.fxconnector.StageController;
-import org.scenicview.view.control.ProgressWebView;
+import org.javafx.devtools.component.ProgressWebView;
 import org.scenicview.view.DisplayUtils;
 
 public class HelpBox {

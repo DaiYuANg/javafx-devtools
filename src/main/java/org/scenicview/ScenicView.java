@@ -172,10 +172,10 @@ public class ScenicView extends Application {
 //    setUserAgentStylesheet(STYLESHEET_MODENA);
 
     val strategy = new RemoteVMsUpdateStrategy();
-    val alternativeStage = new Stage();
-    val scene = DIContext.INSTANCE.get(Scene.class);
-    alternativeStage.setScene(scene);
-    alternativeStage.show();
+//    val alternativeStage = new Stage();
+//    val scene = DIContext.INSTANCE.get(Scene.class);
+//    alternativeStage.setScene(scene);
+//    alternativeStage.show();
 
     // workaround for RT-10714
     stage.setWidth(1024);
