@@ -59,7 +59,7 @@ jobs:
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "release.tar.gz,build/jpackage/*"
+          artifacts: "build/jpackage/*.*"
           generateReleaseNotes: true
           tag: v0.0.1
 #      - name: Upload Release Asset
